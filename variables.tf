@@ -1,7 +1,11 @@
 # required
-variable "name" {
-  description = "Name of the target group"
+variable "env" {
+  description = "The name of the environment (included at the front of the DNS name with a hyphen if not live)"
+}
+
+variable "component_name" {
   type        = "string"
+  description = "The name of the component - used by default for the DNS entry (with the -service suffix removed), as well as to give the target group a meaningful name"
 }
 
 variable "vpc_id" {
