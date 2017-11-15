@@ -14,11 +14,6 @@ variable "alb_listener_arn" {
   type        = "string"
 }
 
-variable "target_group_arn" {
-  description = "Target group to direct traffic to"
-  type        = "string"
-}
-
 variable "path_conditions" {
   description = "Defines path-based conditions for routing; separate by, eg. '/home,/home/*'"
   type        = "list"

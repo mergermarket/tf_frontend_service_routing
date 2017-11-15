@@ -29,7 +29,7 @@ resource "aws_alb_listener_rule" "rule" {
 
   action {
     type             = "forward"
-    target_group_arn = "${var.target_group_arn}"
+    target_group_arn = "${aws_alb_target_group.target_group.arn}"
   }
 
   # Always pass host-based routing condition, with '*.*' being default
