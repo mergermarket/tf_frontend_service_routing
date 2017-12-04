@@ -19,7 +19,7 @@ variable "alb_listener_arn" {
 }
 
 variable "path_conditions" {
-  description = "Defines path-based conditions for routing; separate by, eg. '/home,/home/*'"
+  description = "Defines path-based conditions for routing - e.g. ['/home', '/home/*']"
   type        = "list"
 }
 
