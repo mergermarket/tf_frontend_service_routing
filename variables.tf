@@ -75,3 +75,13 @@ variable "health_check_matcher" {
   type        = "string"
   default     = "200-299"
 }
+
+variable "stickiness_enabled" {
+  description = "Turn sticky sessions on or off"
+  default = false
+}
+
+variable "cookie_duration" {
+  description = "How long sticky session cookie lasts"
+  default = "86400"
+}
