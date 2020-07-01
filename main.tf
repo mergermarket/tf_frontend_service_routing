@@ -16,12 +16,6 @@ resource "aws_alb_target_group" "target_group" {
     matcher             = "${var.health_check_matcher}"
   }
 
-  stickiness {
-    type = "lb_cookie"
-    cookie_duration = "${var.cookie_duration}"
-    enabled = "${var.stickiness_enabled}"
-  }
-
   lifecycle {
     create_before_destroy = true
   }
