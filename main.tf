@@ -2,8 +2,8 @@ resource "aws_alb_target_group" "target_group" {
   name = "${replace(replace("${var.env}-${var.component_name}", "/(.{0,32}).*/", "$1"), "/^-+|-+$/", "")}"
 
   # port will be set dynamically, but for some reason AWS requires a value
-  port                 = "${var.port}"
-  target_type          = "${var.target_type}"
+  port                 = "31337"
+  # target_type          = "${var.target_type}"
   protocol             = "HTTP"
   vpc_id               = "${var.vpc_id}"
   deregistration_delay = "${var.deregistration_delay}"
