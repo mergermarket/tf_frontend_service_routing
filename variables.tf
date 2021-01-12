@@ -85,3 +85,13 @@ variable "cookie_duration" {
   description = "How long sticky session cookie lasts"
   default = "86400"
 }
+
+variable "port" {
+  description = "Target port. For ECS service port will be set dynamically."
+  default = "31337"
+}
+
+variable "target_type" {
+  description = "The possible values are instance, ip or lambda."
+  default = "instance"
+}
